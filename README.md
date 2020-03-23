@@ -1,4 +1,6 @@
-# Express
+# Express Mongo Photos
+
+功能：照片显示/上传/下载
 
 ## 使用步骤
 
