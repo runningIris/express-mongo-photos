@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= settings.title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <ul>
+        <% photos.forEach(photo => { %>
+            <li id="<%= photo.id %>">
+                <p><%= photo.name %></p>
+                <img src="/photos/<%= photo.path %>" alt="" style="max-width: 200px">
+                <a href="/photo/<%= photo.id %>/download">
+                    download
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+    <p>
+        <a href="/upload">Go to upload photo -></a>
+    </p>
+</body>
+</html>
